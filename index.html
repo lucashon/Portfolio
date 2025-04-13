@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+   
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Portfólio</h1>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre Mim</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="main">
+    <img src="assets/perfil.jpeg" alt="Minha Foto" />
+    <h2>Lucas Honorio Santos Aguiar</h2>
+    <p>Desenvolvedor Web Fullstack</p>
+    <p>Cursos realizados: Senai, Curso em Video e Dio</p>
+
+    <div>
+      <a href=""> INSTAGRAM </a>
+      <a href="https://github.com/lucashon"> GITHUB </a>
+      <a href="https://www.linkedin.com/in/lucas-honorio-40a624295/"> LINKEDIN </a>
+
+    </div>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>
+      
+      Meu nome é Lucas! e sou desenvolvedor com formação técnica em Informática para Internet pelo SENAI, concluída há três anos. Durante esse período, adquiri uma base sólida no desenvolvimento web, trabalhando com linguagens como <strong>JavaScript, HTML e CSS</strong>, além de tecnologias complementares como <strong>Node.js, Express, Handlebars e o padrão arquitetural MVC (Model-View-Controller)</strong>.
+      
+      No SENAI, participei ativamente de <strong>projetos integradores</strong>, nos quais desenvolvíamos soluções para problemáticas reais por meio de sistemas e aplicações web. Esses projetos me proporcionaram uma vivência prática com demandas semelhantes às do mercado, desde o levantamento de requisitos até a entrega da solução final.
+      
+      Atualmente, estou cursando <strong>Sistemas de Informação no Instituto Federal de Alagoas (IFAL)</strong> e estou no final do primeiro período. Meu foco tem sido aprofundar ainda mais meus conhecimentos em engenharia de software, estruturas de dados e arquitetura de sistemas. <br>
+      
+      Apesar de ainda não ter atuado profissionalmente na área de desenvolvimento, tenho tido contato com tecnologias e sistemas no meu trabalho atual. Um exemplo disso é o DeMaria, um sistema com o qual lido diretamente, que envolve gestão de dados e se assemelha a um banco de dados. Essa vivência tem me permitido manter o raciocínio lógico ativo e entender a importância da organização, integridade e acesso às informações em sistemas de informação reais.
+      
+      Busco constantemente melhorar minhas habilidades e estou sempre aberto a novos aprendizados e desafios. Tenho interesse especial por desenvolvimento web e pretendo expandir meu conhecimento para áreas como APIs REST, banco de dados relacionais e não relacionais, além de frameworks modernos como React ou Vue.js.
+      
+      <br>
+      
+     </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="projects-wrapper">
+      <button class="arrow arrow-left" onclick="scrollProjects(-1)">&#10094;</button>
+     
+      <div class="projects" id="projects">
+        <div class="project-card">
+          <img src="assets/inclusion.png" alt="Imagem do Projeto 1">
+          <h3>Inclusion Map</h3>
+          <p>Projeto para auxiliar prefeitura de Rio Grande do Sul a prestar serviços para melhorar a mobilidade.</p>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/twitter.avif" alt="Imagem do Projeto 2">
+          <h3>Clone do Twitter</h3>
+          <p>Projeto inspirado no twitter/X realizado em sala de aula como atividade desafio.</p>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/pensador.jpg" alt="Imagem do Projeto 3">
+          <h3>Projeto Pensador</h3>
+          <p>Projeto para aicionar informações no banco de dados, baseado nas configurações do twitter</p>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/previsao.png" alt="Imagem do Projeto 4">
+          <h3>Previsão do tempo</h3>
+          <p>Projeto para prever tempo e temperatuda compreto</p>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/inclusion.png" alt="Imagem do Projeto 5">
+          <h3>Inclusion Map</h3>
+          <p>Projeto para auxiliar prefeitura de Rio Grande do Sul a prestar serviços para melhorar a mobilidade.</p>
+        </div>
+
+
+      </div>
+      <button class="arrow arrow-right" onclick="scrollProjects(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form action="https://formsubmit.co/lucas.honorio2916@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer style="background-color: #111; text-align: center; padding: 20px; margin-top: 60px;">
+    <p>&copy; <span id="ano"></span> Lucas Honório. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function scrollProjects(direction) {
+      const container = document.getElementById('projects');
+      const scrollAmount = 300;
+      container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
